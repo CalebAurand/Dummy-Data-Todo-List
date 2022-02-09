@@ -37,9 +37,11 @@
     }
     
     const populateTodos = () => {
-        let title1 = arrayOfTodos[0].title;
-        let listI = document.createElement('li');
-        let newText = document.createTextNode(title1);
-        listI.appendChild(newText);
-        ordList.appendChild(listI);
+        for(let i =0; i<arrayOfTodos.length; i++){
+            let title1 = arrayOfTodos[i].title;
+            let listI = document.createElement('li');
+            let newText = document.createTextNode(title1);
+            listI.appendChild(newText);
+            ordList.appendChild(listI);
+        }
     }
