@@ -12,7 +12,9 @@
         "id": 2,
         "title": "delectus aut autem",
         "completed": false
-    }]
+    }];
+
+    const ordList = document.getElementById('todo-list');
     
     const fetchTodos = () => {
         fetch('https://jsonplaceholder.typicode.com/todos')
@@ -21,9 +23,23 @@
     }
     
     const logTodos = () => {
-        console.log(arrayOfTodos)
+        console.log(arrayOfTodos);
+        console.log(arrayOfTodos[0].title);
+        console.log(ordList);
+        let title1 = arrayOfTodos[0].title;
+        let listI = document.createElement('li');
+        let newText = document.createTextNode(title1);
+        listI.appendChild(newText);
+        ordList.appendChild(listI);
+        console.log(listI);
+        console.log(ordList);
+
     }
     
     const populateTodos = () => {
-    
+        let title1 = arrayOfTodos[0].title;
+        let listI = document.createElement('li');
+        let newText = document.createTextNode(title1);
+        listI.appendChild(newText);
+        ordList.appendChild(listI);
     }
