@@ -1,0 +1,17 @@
+button {
+    margin: 10px auto;
+    display: inline-block;
+
+}
+
+input {
+    margin: 10px auto;
+    display: inline-block;
+
+}
+
+label {
+display: inline-block;
+margin: 0 auto;
+/* margin-left: 40%;    */
+}
