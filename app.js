@@ -45,3 +45,44 @@
             ordList.appendChild(listI);
         }
     }
+
+    const filterTodos = () => {
+        clearTodos();
+        setUserId();
+    }
+
+    function clearTodos() {
+        let todos = document.querySelectorAll('li');
+        // todos.remove();
+        for(let i =0; i<todos.length; i++){
+            todos[i].remove();
+        }
+        
+    }
+
+    function setUserId() {
+        const userId = document.getElementById('userIdIn').value;
+        console.log("userId is: "+ userId);
+        console.log(arrayOfTodos);
+        let results = arrayOfTodos.filter(todo => todo.userId===parseInt(userId));
+        console.log(results);
+    
+        for(let i=0; i<results.length; i++){
+            let title = results[i].title;
+            let listI = document.createElement('li');
+            let newText = document.createTextNode(title);
+            listI.appendChild(newText);
+            ordList.appendChild(listI);
+        }
+    
+    }
+
+    //Next step create a button that will remove these todos and show only the ones that are completed
+    //Next step create a button that will remove these todos and show only the ones that are NOOOOT completed
+
+
+    //ADVANCED - build another column for complete todos
+    //sort the todos on just one click
+        //show only the selected userID's todos
+        //displays the completed todos in one column
+        //and the incomplete todos in another.
